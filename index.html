@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Human Body</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+
+        .human {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* HEAD */
+        .head {
+            width: 120px;
+            height: 140px;
+            background: #f9c9a9;
+            border-radius: 50%;
+            position: relative;
+            border: 3px solid #000;
+        }
+
+        .eye {
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            border: 2px solid #000;
+        }
+
+        .eye::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .eye.left {
+            left: 30px;
+        }
+
+        .eye.right {
+            right: 30px;
+        }
+
+        .mouth {
+            width: 50px;
+            height: 20px;
+            background: red;
+            border-radius: 0 0 25px 25px;
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 2px solid #000;
+        }
+
+        .hair {
+            width: 100px;
+            height: 60px;
+            background: black;
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+
+        /* BODY */
+        .body {
+            width: 100px;
+            height: 160px;
+            background: blue;
+            border-radius: 20px;
+            border: 3px solid #000;
+        }
+
+        /* ARMS */
+        .arm {
+            width: 30px;
+            height: 120px;
+            background: #f9c9a9;
+            position: absolute;
+            top: 30px;
+            border-radius: 20px;
+            border: 3px solid #000;
+        }
+
+        .arm.left {
+            left: -40px;
+        }
+
+        .arm.right {
+            right: -40px;
+        }
+
+        /* LEGS */
+        .legs {
+            display: flex;
+            justify-content: space-between;
+            width: 100px;
+        }
+
+        .leg {
+            width: 35px;
+            height: 120px;
+            background: #654321;
+            border-radius: 20px;
+            border: 3px solid #000;
+        }
+
+        /* SHOES */
+        .shoe {
+            width: 40px;
+            height: 20px;
+            background: black;
+            border-radius: 10px;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="human">
+        <!-- Head -->
+        <div class="head">
+            <div class="hair"></div>
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="mouth"></div>
+        </div>
+
+        <!-- Arms -->
+        <div class="arm left"></div>
+        <div class="arm right"></div>
+
+        <!-- Body -->
+        <div class="body"></div>
+
+        <!-- Legs -->
+        <div class="legs">
+            <div class="leg">
+                <div class="shoe"></div>
+            </div>
+            <div class="leg">
+                <div class="shoe"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
